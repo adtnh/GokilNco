@@ -1,5 +1,6 @@
 on =[[🟢 ON 🔥]] off =[[🔴 OFF ]] hack0= off
 function start()
+gg.clearResults() gg.clearList()
 your_choice = gg.multiChoice({
 "BOST"..hack0.."BTR",
 "SPEED HACK",
@@ -212,8 +213,8 @@ end
 end
 
 function sentral7()
-gg.loadList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-99-2026-03-07-nm.crypt14")
-end
+fileData =  gg.FILES_DIR .. "/xspd.txt"
+gg.loadList(fileData, gg.LOAD_APPEND) end
 function mash() 
  gg.setValues(results)
  gg.clearResults()gg.clearList()end 
@@ -254,8 +255,10 @@ gg.loadResults(Offsets['FinalResults'])
 results = gg.getResults(50)
 for i, v in ipairs(results) do
 v.freeze = false end
-gg.addListItems(results)
-gg.saveList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-99-2026-03-07-nm.crypt14")
+gg.addListItems(results) gg.clearResults()
+fileData =  gg.FILES_DIR .. "/xspd.txt"
+gg.saveList(fileData, gg.LOAD_APPEND)
+
 
 gg.clearList() gg.clearResults()
 gg.setVisible(false)
@@ -264,11 +267,14 @@ gg.clearResults() gg.clearList()
 gg.searchNumber("4656722017932804096", 32)
 results = gg.getResults(90000)
 gg.addListItems(results)
-gg.saveList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-10-2026-03-07-nm.crypt14")
+fileData =  gg.FILES_DIR .. "/x_nm.txt"
+gg.saveList(fileData, gg.LOAD_APPEND)
+gg.clearList() gg.clearResults()
 --gg.clearResults()
 --end
 function sentral1()
-gg.loadList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-10-2026-03-07-nm.crypt14")
+fileData =  gg.FILES_DIR .. "/x_nm.txt"
+gg.loadList(fileData)
 gg.loadResults(gg.getListItems()) gg.clearList()
 results = gg.getResults(90000)
 for i = 1,#results do gg.addListItems({
@@ -286,14 +292,15 @@ gg.toast("✓✓✓✓✓")
 end gg.clearList() gg.clearResults()
 
 function sentral2()
-gg.loadList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-10-2026-03-07-nm.crypt14")
+fileData =  gg.FILES_DIR .. "/x_nm.txt"
+gg.loadList(fileData)
 gg.loadResults(gg.getListItems()) gg.clearList()
 results = gg.getResults(90000)
 for i = 1,#results do gg.addListItems({
 [1] = {address = results[i].address + 48,
 flags = 32, value = ":.My-", freeze = true },
 [2] = {address = results[i].address + 52,
-flags = 32, value = ":.Alle", freeze = true },
+flags = 32, value = ":Alle", freeze = true },
 [3] = {address = results[i].address + 56,
 flags = 32, value = ":x Pa", freeze = true},
 [4] = {address = results[i].address + 60,
@@ -304,14 +311,15 @@ gg.toast("✓✓✓✓✓")
 end gg.clearList() gg.clearResults()
 
 function sentral3()
-gg.loadList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-10-2026-03-07-nm.crypt14")
+fileData =  gg.FILES_DIR .. "/x_nm.txt"
+gg.loadList(fileData)
 gg.loadResults(gg.getListItems()) gg.clearList()
 results = gg.getResults(90000)
 for i = 1,#results do gg.addListItems({
 [1] = {address = results[i].address + 48,
 flags = 4, value = ":.Kin", freeze = true },
 [2] = {address = results[i].address + 52,
-flags = 4, value = ":.g AL", freeze = true },
+flags = 4, value = ":g AL", freeze = true },
 [3] = {address = results[i].address + 56,
 flags = 4, value = ":L Lo", freeze = true},
 [4] = {address = results[i].address + 60,
@@ -322,20 +330,21 @@ gg.toast("✓✓✓✓✓")
 end gg.clearList() gg.clearResults()
 --
 function sentral4()
-gg.loadList("/storage/emulated/0/Android/media/com.whatsapp.w4b/WhatsApp Business/Databases/msgstore-increment-10-2026-03-07-nm.crypt14")
+fileData =  gg.FILES_DIR .. "/x_nm.txt"
+gg.loadList(fileData)
 gg.loadResults(gg.getListItems()) gg.clearList()
 results = gg.getResults(90000)
 for i = 1,#results do gg.addListItems({
 [1] = {address = results[i].address + 48,
 flags = 4, value = ":.WA: ", freeze = true },
 [2] = {address = results[i].address + 52,
-flags = 4, value = ":.+628", freeze = true },
+flags = 4, value = ":(+628", freeze = true },
 [3] = {address = results[i].address + 56,
 flags = 4, value = ":7847", freeze = true},
 [4] = {address = results[i].address + 60,
 flags = 4, value = ":1172", freeze = true},
 [5] = {address = results[i].address + 64,
-flags = 4, value = ":62", freeze = true}}) end
+flags = 4, value = ":62)", freeze = true}}) end
 gg.toast("✓✓✓✓✓")
 end
 gg.processResume()
