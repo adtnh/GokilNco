@@ -220,6 +220,8 @@ function mash()
  gg.clearResults()gg.clearList()end 
  
 gg.setVisible(false)
+
+--[[
 gg.setRanges(gg.REGION_OTHER)
 gg.clearResults() gg.clearList()
 gg.searchNumber(734569516132933277, gg.TYPE_QWORD)
@@ -272,6 +274,7 @@ gg.saveList(fileData, gg.LOAD_APPEND)
 gg.clearList() gg.clearResults()
 --gg.clearResults()
 --end
+]]
 function sentral1()
 fileData =  gg.FILES_DIR .. "/x_nm.txt"
 gg.loadList(fileData)
