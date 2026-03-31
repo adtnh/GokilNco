@@ -15,7 +15,6 @@ start() end end end
 if your_choice[1] then
  if hack0 == off  then
  gg.setRanges(gg.REGION_C_ALLOC)
- gg.setRanges(gg.REGION_C_ALLOC)
 gg.clearResults()
 gg.searchNumber("-7840", 16)
 revert = gg.getResults(9999)
@@ -67,6 +66,7 @@ results = gg.getResults(50)
     v.value = 24 
     gg.setValues(results) end
 gg.setValues(results) 
+gg.addListItems(results)  gg.clearResults()
 gg.toast("ON √")
 while true do 
  if gg.isVisible(true) then break end 
