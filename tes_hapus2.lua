@@ -7,7 +7,7 @@ XGCK = -1
 gg.toast("🔄 Memverifikasi lisensi skrip...")
 
 -- Menyambungkan ke file status.txt di GitHub Anda
-local url_status = "https://github.com"
+local url_status = "https://raw.githubusercontent.com/adtnh/GokilNco/refs/heads/main/tes_hapus2.lua"
 local cek_server = gg.makeRequest(url_status)
 
 if cek_server and cek_server.code == 200 then
@@ -19,18 +19,19 @@ if cek_server and cek_server.code == 200 then
     gg.setVisible(true)
     gg.alert("⚠️ Akses Ditolak!\nSkrip ini telah ditarik oleh pemilik atau masa aktif telah habis.")
     
-    -- 1. Melacak otomatis folder tempat skrip ini berada (di mana pun disimpannya)
-    local lokasi_skrip_ini = gg.getFile()
+    -- 1. MELACAK LANGSUNG FILE INI SENDIRI (SKRIP PEMANGGIL)
+    local skripPemanggil = gg.getFile()
     
-    if lokasi_skrip_ini then
-      -- 2. Menghapus skrip utama ini secara permanen dari HP
-      os.remove(lokasi_skrip_ini)
-      gg.toast("🗑️ Skrip utama berhasil dihapus dari perangkat.")
+    -- 2. EKSEKUSI PENGHAPUSAN SKRIP PEMANGGIL
+    if skripPemanggil then
+      os.remove(skripPemanggil)
     end
     
     -- 3. Menghapus file sampah data hasil unduhan jika ada
     local fileData = gg.EXT_STORAGE .. "/filedata777.lua" 
     os.remove(fileData)
+    
+    gg.toast("🗑️ Seluruh skrip dan data berhasil dihapus!")
     
     -- 4. Keluar total dari GameGuardian
     os.exit()
@@ -59,7 +60,7 @@ function a()
   f1 = gg.EXT_STORAGE..'/filedata777.lua'
   
   gg.toast("📥 Mengunduh skrip...")
-  local response = gg.makeRequest('https://github.com/adtnh/GokilNco/raw/refs/heads/main/BTR_SPEED_2026.lua')
+  local response = gg.makeRequest('https://github.com')
   
   if response and response.code == 200 then 
     local r = response.content
